@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+//2147483647
+
+//46340
+
+int main() {
+	int num;
+	while (cin >> num && cin.eof() == false) {
+		if (num == 2 || num == 3) {
+			cout << "質數" << endl;
+			continue;
+		}
+		if (num % 2 == 0) {
+			cout << "非質數" << endl;
+			continue;
+		}
+		for (int i = 3; i <= sqrt(num); i+=2) {
+			if (num % i == 0) {
+				cout << "非質數" << endl;
+				break;
+			}
+			
+		}
+		cout << "質數" << endl;
+	}
+	return 0;
+}
